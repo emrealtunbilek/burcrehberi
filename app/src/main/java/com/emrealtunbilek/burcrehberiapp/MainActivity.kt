@@ -1,7 +1,9 @@
 package com.emrealtunbilek.burcrehberiapp
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -17,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       var burclarAdapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,burclar)
+      // var burclarAdapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,burclar)
+        var burclarAdapter=ArrayAdapter<String>(this, R.layout.tek_satir, R.id.tvBurcAdi, burclar)
 
         listBurclar.adapter=burclarAdapter
 
@@ -39,6 +42,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Tıklanıldı : "+gecici.text.toString()+ " Pos:"+position,Toast.LENGTH_SHORT).show()
 
         }
+
+
+
     }
 
 
