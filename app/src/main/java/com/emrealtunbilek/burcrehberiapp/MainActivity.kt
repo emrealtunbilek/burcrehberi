@@ -19,11 +19,14 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.terazi7, R.drawable.akrep8, R.drawable.yay9, R.drawable.oglak10, R.drawable.kova11, R.drawable.balik12)
 
         //var myAdapter=ArrayAdapter<String>(this,R.layout.tek_satir, R.id.tvBurcAdi, burclar)
-        var myAdapter=BurclarArrayAdapter(this, R.layout.tek_satir,R.id.tvBurcAdi, burclar, burcTarihleri,burcResimleri)
-        //listBurclar.adapter=myAdapter
+       /* var myAdapter=BurclarArrayAdapter(this, R.layout.tek_satir,R.id.tvBurcAdi, burclar, burcTarihleri,burcResimleri)
+        listBurclar.adapter=myAdapter*/
 
         var myBaseAdapter=BurclarBaseAdapter(this)
+
         listBurclar.adapter=myBaseAdapter
+
+
 
     }
 
