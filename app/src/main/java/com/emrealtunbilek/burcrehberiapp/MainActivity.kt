@@ -20,7 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         //var myAdapter=ArrayAdapter<String>(this,R.layout.tek_satir, R.id.tvBurcAdi, burclar)
         var myAdapter=BurclarArrayAdapter(this, R.layout.tek_satir,R.id.tvBurcAdi, burclar, burcTarihleri,burcResimleri)
-        listBurclar.adapter=myAdapter
+        //listBurclar.adapter=myAdapter
+
+        var myBaseAdapter=BurclarBaseAdapter(this)
+        listBurclar.adapter=myBaseAdapter
 
     }
 
