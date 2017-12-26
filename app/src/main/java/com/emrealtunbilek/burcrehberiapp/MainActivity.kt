@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        window.statusBarColor=resources.getColor(R.color.statusBarColor)
+
         veriKaynagiHazirla()
 
         var myBaseAdapter=BurclarBaseAdapter(this, tumBurcBilgileri)

@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.emrealtunbilek.burcrehberiapp.MainActivity">
+    android:background="@drawable/bgimage"
+    tools:context="com.emrealtunbilek.burcrehberiapp.SplashActivity">
 
-    <ListView
-        android:id="@+id/listBurclar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:contentDescription="Logo"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:divider="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 </android.support.constraint.ConstraintLayout>
