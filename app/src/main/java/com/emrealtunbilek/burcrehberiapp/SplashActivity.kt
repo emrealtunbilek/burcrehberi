@@ -13,11 +13,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-
-
-
-
-
     }
 
     override fun onResume() {
@@ -26,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
 
         imgLogo.animation=logoDondurAnimasyon
 
-        object : CountDownTimer(5000, 1000){
+        object : CountDownTimer(6000, 1000){
 
             override fun onFinish() {
                 var intent=Intent(this@SplashActivity, MainActivity::class.java)
