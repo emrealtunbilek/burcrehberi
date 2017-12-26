@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
             var intent=Intent(this@MainActivity,DetayActivity::class.java)
             intent.putExtra("tiklanilanOgePosition", position)
+            intent.putExtra("tumBurcBilgileri", tumBurcBilgileri)
             startActivity(intent)
         }
 

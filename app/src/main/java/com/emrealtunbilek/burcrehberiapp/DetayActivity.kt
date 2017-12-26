@@ -3,6 +3,7 @@ package com.emrealtunbilek.burcrehberiapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_detay.*
 
 class DetayActivity : AppCompatActivity() {
 
@@ -10,8 +11,11 @@ class DetayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detay)
 
-        var position=intent.extras.get("tiklanilanOgePosition")
-        Toast.makeText(this,"Tıklanılan oge pos : " + position, Toast.LENGTH_SHORT).show()
+        var position=intent.extras.get("tiklanilanOgePosition") as Int
+        var tumBurcBilgileri = intent.extras.get("tumBurcBilgileri") as ArrayList<Burc>
+
+        tvBurcOzellikleri.setText(tumBurcBilgileri.get(position).burcGenelOzellikleri)
+
 
     }
 }
