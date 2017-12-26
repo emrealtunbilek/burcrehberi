@@ -12,25 +12,14 @@ import kotlinx.android.synthetic.main.tek_satir.view.*
 /**
  * Created by Emre on 25.12.2017.
  */
-class BurclarBaseAdapter(context: Context) : BaseAdapter() {
+class BurclarBaseAdapter(context: Context, tumBurcBilgileri:ArrayList<Burc>) : BaseAdapter() {
 
-    var tumBurclar:ArrayList<Burclar>
+    var tumBurclar:ArrayList<Burc>
     var context:Context
 
     init {
-        tumBurclar=ArrayList<Burclar>(12)
+        this.tumBurclar=tumBurcBilgileri
         this.context=context
-
-        var burcAdlari=context.resources.getStringArray(R.array.burclar)
-        var burcTarihleri=context.resources.getStringArray(R.array.burcTarih)
-        var burcResimleri = arrayOf(R.drawable.koc1, R.drawable.boga2, R.drawable.ikizler3, R.drawable.yengec4, R.drawable.aslan5, R.drawable.basak6,
-                R.drawable.terazi7, R.drawable.akrep8, R.drawable.yay9, R.drawable.oglak10, R.drawable.kova11, R.drawable.balik12)
-
-        for (i in 0..11){
-            var arraylisteAtanacakBurc=Burclar(burcAdlari[i], burcTarihleri[i], burcResimleri[i])
-            tumBurclar.add(arraylisteAtanacakBurc)
-        }
-
     }
 
 
@@ -77,7 +66,7 @@ class BurclarBaseAdapter(context: Context) : BaseAdapter() {
     }
 }
 
-data class Burclar(var burcAdi:String, var burcTarih:String, var burcSembol:Int){}
+
 
 class ViewHolder2 (tek_satir_view:View){
 
